@@ -1,5 +1,11 @@
 # Crime Forecasting and Prediction Using Spatio-Temporal Techniques  
 
+## 📜 Conference Presentation  
+This paper was **presented at IJCACI Conference (2025)**.  
+You can view the official **Letter of Presentation** here:  
+
+👉 [View Certificate / Letter](https://drive.google.com/file/d/1XYXlZ1BT14ul9mM8bb_gdw2H_n0XF1ud/view)  
+
 ## Overview  
 This repository contains the implementation of **Crime Forecasting and Prediction Using Spatio-Temporal Techniques**.  
 We apply **machine learning, deep learning, and graph neural networks (GNNs)** to forecast urban crime patterns across **time and space** using **Los Angeles crime data (2020–2025)**.  
