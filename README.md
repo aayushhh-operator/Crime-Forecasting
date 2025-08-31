@@ -1,17 +1,32 @@
-Crime Forecasting and Prediction Using Spatio-Temporal Techniques
-📌 Overview
+# Crime Forecasting and Prediction Using Spatio-Temporal Techniques  
 
-This repository contains the implementation and research artifacts for Crime Forecasting and Prediction Using Spatio-Temporal Techniques.
-The project leverages machine learning, deep learning, and graph neural networks (GNNs) to model and forecast urban crime trends across time and space, using Los Angeles crime data (2020–2025).
+## Overview  
+This repository contains the implementation of **Crime Forecasting and Prediction Using Spatio-Temporal Techniques**.  
+We apply **machine learning, deep learning, and graph neural networks (GNNs)** to forecast urban crime patterns across **time and space** using **Los Angeles crime data (2020–2025)**.  
 
-Our framework integrates:
+---
 
-Supervised Learning (KNN, Decision Tree, Random Forest) for crime solvability classification.
+## Methodology  
 
-Time Series Models (ARIMA, Prophet, Hybrid ARIMA+Prophet, Prophet+ARIMA) for temporal forecasting.
+### Dataset  
+- **Source**: [City of Los Angeles Open Data Portal](https://catalog.data.gov/dataset/crime-data-from-2020-to-present)  
+- **Records**: 1M+ (2020–2025)  
+- **Features**: Date, Time, Location (lat/lon), Crime Type  
+- **Engineering**: Holiday flags, weekend/weekday, temporal bins, grouped crime categories  
 
-Deep Learning (RNN + LSTM) for multi-scale (daily, weekly, monthly) prediction.
+### Models  
+- **Classification** → Random Forest (92% accuracy), KNN, Decision Tree  
+- **Temporal Forecasting** → ARIMA + Prophet, Prophet + ARIMA, RNN + LSTM (best RMSE daily: 0.0585)  
+- **Spatial Forecasting** → ST-GCN (best RMSE: 244.78), GAT, STA-GNN  
 
-Graph Neural Networks (ST-GCN, GAT, STA-GNN) for spatial-temporal forecasting.
+---
 
-The system provides actionable insights for law enforcement, city planners, and policymakers to proactively allocate resources, identify hotspots, and enhance public safety.
+## Results  
+
+| Task                 | Best Model  | Metric   | Score   |
+|----------------------|------------|----------|---------|
+| Crime Solvability    | RandomForest | Accuracy | **92%** |
+| Temporal Forecasting | RNN+LSTM     | RMSE (daily) | **0.0585** |
+| Spatial Forecasting  | ST-GCN       | RMSE    | **244.78** |
+
+---
